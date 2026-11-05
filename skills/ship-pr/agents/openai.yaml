@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ship PR"
+  short_description: "Deslop, thermo review, open a PR, resolve comments"
+policy:
+  allow_implicit_invocation: false
