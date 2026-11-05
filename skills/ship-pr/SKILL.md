@@ -18,7 +18,7 @@ Steps 1 and 2 load the `deslop` and `thermo-nuclear-code-quality-review` skills,
 npx skills add umarrasydan/skills --skill deslop --skill thermo-nuclear-code-quality-review
 ```
 
-If the host refuses to start either one, for example because the user has Cursor's original thermo, which only the user may start, ask the user to run it on the branch, wait for its result, and continue from there. Do not reproduce it from its file or substitute a generic review.
+If the host refuses to start either one, ask the user to run it on the branch, wait for its result, and continue from there. Do not reproduce it from its file or substitute a generic review.
 
 ## Steps
 
