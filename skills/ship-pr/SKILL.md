@@ -12,14 +12,13 @@ Work on the existing change branch. If you are on the default branch, create one
 
 ## Dependencies
 
-Steps 1 and 2 load the `deslop` and `thermo-nuclear-code-quality-review` skills from Cursor's [cursor-team-kit](https://github.com/cursor/plugins/tree/main/cursor-team-kit). If either is missing, stop and give the user the install command:
+Steps 1 and 2 load the `deslop` and `thermo-nuclear-code-quality-review` skills, which ship alongside this one. If either is missing, stop and give the user the install command:
 
 ```bash
-npx skills add https://github.com/cursor/plugins/tree/main/cursor-team-kit/skills/deslop
-npx skills add https://github.com/cursor/plugins/tree/main/cursor-team-kit/skills/thermo-nuclear-code-quality-review
+npx skills add umarrasydan/skills --skill deslop --skill thermo-nuclear-code-quality-review
 ```
 
-Upstream marks thermo as user-invoked only, so some hosts, including Claude Code, refuse to start it from inside this skill. When that happens, ask the user to run it on the branch, wait for its review, and continue step 2 with that review. Do not reproduce it from its file or substitute a generic review.
+If the host refuses to start either one, for example because the user has Cursor's original thermo, which only the user may start, ask the user to run it on the branch, wait for its result, and continue from there. Do not reproduce it from its file or substitute a generic review.
 
 ## Steps
 
