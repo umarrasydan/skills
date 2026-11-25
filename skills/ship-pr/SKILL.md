@@ -32,7 +32,7 @@ If the host refuses to start either one, ask the user to run it on the branch, w
    - If it is wrong or out of scope, reply with the reason and leave the thread for the reviewer to resolve.
    - If it needs the user's judgment, leave it open and list it in the report.
 
-   When a check fails, try to reproduce it with the narrowest run the repository offers, such as one test file or a targeted workflow dispatch, before you push again. The log alone does not tell a flaky runner from a break in the branch. If the failure does not reproduce, or the host offers only a full rerun, record what you saw, rerun once and follow that run.
+   When a check fails, try to reproduce it with the narrowest run the repository offers, such as one local test file or a targeted workflow dispatch, before you push again. The log alone does not tell a flaky runner from a break in the branch. If it reproduces, fix the break, verify, and push. If it does not reproduce, or no narrower run exists and you can only trigger a full rerun, record what you saw, rerun once, and follow that run.
 
    Resolve a thread with `gh api graphql` and the `resolveReviewThread` mutation. Pushing a fix can start a new review round, so repeat this step until checks pass and no actionable threads remain. Do not report the PR ready to merge, or merge it when authorized, while checks or expected automated reviewers are still pending on the current head commit. Re-read unresolved review threads right before finishing. If a full poll interval brings no new reviews after checks finish, stop waiting, report the reviewers who never responded, and do not treat the PR as cleared for merge.
 
